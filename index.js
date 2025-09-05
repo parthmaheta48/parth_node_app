@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Running on AWS App Runner Service !');
+    res.send('Parth Is Running on AWS App Runner Service !');
+});
+
+app.get('/healthz', (req, res) => {
+    res.send('OK');
 });
 
 const PORT = process.env.PORT || 8080;
