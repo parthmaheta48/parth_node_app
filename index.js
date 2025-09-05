@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Welcome, Parth\'s App Is Running on AWS App Runner Service !');
+   res.json({
+    name: 'apprunner-demo',
+    env: 'parth-prod',
+   });
 });
 
 app.get('/healthz', (req, res) => {
