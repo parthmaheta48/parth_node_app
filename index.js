@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/', (req, res) => {
    res.json({
-    name: 'apprunner-demo',
+    name: 'apprunner-demo-v1',
     env: 'parth-prod',
    });
 });
