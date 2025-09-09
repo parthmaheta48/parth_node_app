@@ -1,10 +1,13 @@
 const express = require('express');
+const dotenv = require('dotenv');
+dotenv.config();
+
 const app = express();
 
 app.get('/', (req, res) => {
    res.json({
-    name: 'apprunner-demo-v1',
-    env: 'parth-prod',
+    name: 'apprunner-demo-v2',
+    env: process.env.ENV||'local',
    });
 });
 
